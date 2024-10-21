@@ -1,0 +1,55 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px; /*to stretch sidebar to header (we use opposites for that -bottom is set to 0 and the oppsite is top with the height of a header, which is 55px-)*/
+  background-color: white;
+  width: 72px;
+  z-index: 200;
+  padding: 5px 0 0 0;
+}
+
+.sidebar-link {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*when using flex-direction: column, align-items and justify-content are reversed*/
+  flex-direction: column;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(235, 235, 235);
+  cursor: pointer;
+}
+
+.sidebar-link img {
+  height: 24px;
+  width: 24px;
+  margin: 0 0 4px 0;
+}
+
+.sidebar-link div {
+  font-family: Roboto, Arial;
+  font-size: 10px;
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar-link {
+    height: 45px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 20px;
+  }
+
+  .sidebar-link div {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+}

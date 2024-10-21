@@ -1,0 +1,169 @@
+.header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom: 1px solid rgb(228, 228, 288);
+
+  z-index: 100; /*z-index is placed inside header to place header above every component. We set position: relative to thumbnail-row so the thumbnail-row element is not under the header anymore (because positioning html element one after the other in a code to make them stack on top of each other is not applied to position relative elements, that rule only applies to statis elements) This is why we need to set up z-index on the header*/
+}
+
+.left-section {
+  /* background-color: lightblue; */
+  /* width: 150px; */ /*removed to contain all of it's content*/
+  display: flex;
+  align-items: center;
+}
+
+.middle-section {
+  /* background-color: lightpink; */
+  flex: 1;
+  margin: 0 35px 0 70px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  margin: 0 10px 0 -1px; /*to remove the edge between search bar and search icon*/
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+  /* font-family: Roboto, Arial; */
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  pointer-events: none; /*to prevent showing up the tooltip (with the opacity: 1 down inside .search-button:hover .tooltip) when hovering over tooltip*/
+  white-space: nowrap; /*to prevent the text from wraping around*/
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+  opacity: 1;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding: 1px 0 1px 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); /*inset sets the shadown inside element and not around*/
+  width: 0; /*set to search bar so that it does shrink from it's original size when resizing the page*/
+}
+
+/*to target placeholder*/
+.search-bar::placeholder {
+  /* font-family: Roboto, Arial; */
+  font-size: 16px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20px;
+  background: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.right-section {
+  /* background-color: lightblue; */
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px 0 0;
+  flex-shrink: 0; /*prevent content from shrinking when resizing*/
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  /* font-family: Roboto, Arial; */
+  font-size: 11px;
+  padding: 2px 5px;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin: 0 24px;
+}
+
+.youtube-logo {
+  height: 20px;
+}
+
+.upload-icon {
+  height: 24px;
+}
+
+.youtube-apps-icon {
+  height: 24px;
+}
+
+.notification-icon {
+  height: 24px;
+}
+
+.current-user-picture {
+  height: 32px;
+  border-radius: 16px;
+}
+
+/* 
+.nekaj {
+  width: 250px;
+  border: 1px solid rgba(182, 180, 180, 0.7);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
