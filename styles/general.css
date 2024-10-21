@@ -1,0 +1,29 @@
+body {
+  margin: 0 0 3000px 0;
+  padding: 80px 24px 0 96px;
+  background-color: #f9f9f9;
+  /* inheritance of font family to all elements in body element */
+  font-family: Roboto, Arial;
+
+  /* 
+    example of css specificity
+    css follows a sort of a priorty
+
+    first we set up the color of text to red and through body element this gets inherited down to children
+    but then we have .video-author class which is defined after body element inside html and it is more specific (color is being set and defined more specific to that element and it has higher priority that to color set inside body element)
+   */
+  /* color: red; */
+}
+
+p {
+  /* this font-family can now be removed from <p> element to save code from unnecessary code  */
+  /* font-family: Roboto, Arial; */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 80px 24px 0 225px;
+  }
+}

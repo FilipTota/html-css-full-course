@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Practice</title>
+  </head>
+  <body style="height: 3000px; padding: 60px 0 0 80px">
+    <!--padding on the body element to have spacing under the header-->
+    <div
+      style="
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* right: 50px;
+        bottom: 10px; */ /*if we add opposites, element stretchs*/
+        height: 50px;
+      "
+    >
+      header
+    </div>
+
+    <div
+      style="
+        background-color: green;
+        color: white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 50px;
+        width: 72px;
+      "
+    >
+      sidebar
+      <div
+        style="
+          position: absolute;
+          background-color: red;
+          color: white;
+          top: 0;
+          right: 0;
+        "
+      >
+        X
+      </div>
+    </div>
+
+    <!-- position absolute and position fixed behave same (they can be moved with top, right, bottom and left) but the difference is that with position fixed element is placed on the browser window (doesn't move when we scroll) and with postion absolute the element is placed on the browser page (it moves with the page when the page is scrolled) -->
+    <div
+      style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        top: 10px;
+        right: 10px;
+      "
+    >
+      Absolute
+    </div>
+
+    <div
+      style="
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: static;
+      "
+    >
+      div 1
+    </div>
+    <div
+      style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          background-color: black;
+          color: white;
+          bottom: 10px;
+          right: 10px;
+        "
+      >
+        5:00
+      </div>
+    </div>
+
+    <div
+      style="
+        position: fixed;
+        background-color: gray;
+        height: 180px;
+        width: 320px;
+        right: 20px;
+        bottom: 20px;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          background-color: black;
+          color: white;
+          top: -10px;
+          left: -10px;
+          font-family: Roboto, Arial;
+          font-size: 14px;
+          padding: 5px 8px;
+          border-radius: 50px;
+        "
+      >
+        X
+      </div>
+      <div
+        style="
+          position: absolute;
+          background-color: black;
+          color: white;
+          right: 10px;
+          bottom: 10px;
+          padding: 3px 6px;
+          font-family: Roboto, Arial;
+        "
+      >
+        0:29
+      </div>
+    </div>
+    <!-- <div
+      style="
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background-color: white;
+          padding: 20px;
+          width: 350px;
+          border-radius: 5px;
+          line-height: 20px;
+        "
+      >
+        <h1 style="margin-top: 0">Modal Title</h1>
+        <p>This is a modal</p>
+        <button>Close</button>
+      </div>
+    </div> -->
+  </body>
+</html>
